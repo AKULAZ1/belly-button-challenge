@@ -34,7 +34,7 @@ function loadIds()
 //Function to get the information required to display bar chart featuring the Top 10 OTUs for each Test ID
 function optionChanged(selectedId)
 {
-    for( i=0; i < samples.length; i++)
+    for( let i=0; i < samples.length; i++)
     {
         //Loops through each selected ID to find its matching dictionary in the samples array 
         if(selectedId == samples[i].id)
@@ -157,6 +157,8 @@ function refreshDemoInfo(selectedId)
             // The .html command was sourced from tutorialsteacher.com to permit overwriting
             //of the html text elments rather than creating a long continuous list.
             d3.select("#sample-metadata").html(demoStr);
+            
+            break;
         }
     }
 }
